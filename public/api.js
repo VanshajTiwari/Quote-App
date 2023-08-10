@@ -19,12 +19,12 @@ async function fillData(){
     
 }
 async function brief(author){
-   window.location.href = `http://127.0.0.1:8005/brief/${author}`;
+   window.location.href = `https://quote-bgwi.onrender.com/brief/${author}`;
 }
 async function sending(author,quote){
     const res=await axios({
         method:"POST",
-        url:"http://127.0.0.1:8005/send",
+        url:"https://quote-bgwi.onrender.com/send",
         data:{author:author,quote:quote}
     }); 
     window.location.reload();
@@ -34,7 +34,7 @@ async function sending(author,quote){
 async function getting(){
     const res=await axios({
         method:"GET",
-        url:"http://127.0.0.1:8005/Quotes"
+        url:"https://quote-bgwi.onrender.com/Quotes"
     });
     return res;
 }; 
